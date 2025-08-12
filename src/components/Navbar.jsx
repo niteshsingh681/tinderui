@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   // Get the user from the Redux store or subcribing to the user state
   const user = useSelector((store) => store.user);
-  console.log("user in navbar", user);
+  //console.log("user in navbar", user);
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">

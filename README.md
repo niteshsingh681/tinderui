@@ -33,3 +33,5 @@ BODY
 
 
 ## DAY==>03
+-->by default(token is not present ) render to login page if user is not logged in
+-->

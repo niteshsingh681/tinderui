@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import { BASE_URL } from '../utils/constant.js';
 import {useDispatch} from 'react-redux';
 import{ addUser} from '../utils/userSlice.js';
 import{useNavigate} from 'react-router-dom';
@@ -10,7 +11,7 @@ const Login = () => {
   const navigate=useNavigate();
   const handleLogin= async()=>{
     try{
-       const user =await axios.post("http://localhost:100/login",
+       const user =await axios.post(BASE_URL+"/login",
         {
       emailId,
       password
@@ -21,7 +22,7 @@ const Login = () => {
   // console.log("Login Success",user.data.user);
     //store the user in redux store
     dispatch(addUser(user.data.user));
-    //redirect to home page
+    //redirect to feed page
      return navigate("/feed");
     }
     catch(err){
