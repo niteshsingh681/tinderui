@@ -2,7 +2,7 @@
 
 ## DAY ==>01
 --Create a React + Vite Application 
---Install Tailwind CSS
+--Install Tailwind CSS/ config that framework to application 
 --Install Daisy UI
 --Add Navbar component 
 --Install React-Router-dom
@@ -22,3 +22,14 @@ BODY
 
 
 ## DAY==>02
+-->install axios{backend}
+-->CORS=> set up in backend  and add middleware   credentials: true
+-->whenever making an api call from frontend then always pass axios=>{withCredential :true} to get back the token from cookies 
+--> install redux and create store
+-->configure the store==>provider to root application==>create a slice==>add reducer to store that you created at step no 1
+-->add redux dev tool extension
+-->verify the login ==>on click login  state of login must be store in redux store
+-->as login happens ==>navbar re-render with hidden profile 
+
+
+## DAY==>03

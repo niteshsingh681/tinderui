@@ -1,6 +1,9 @@
 import React from "react";
-
+import { useSelector } from "react-redux";  
 const Navbar = () => {
+  // Get the user from the Redux store or subcribing to the user state
+  const user = useSelector((store) => store.user);
+  console.log("user in navbar", user);
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
@@ -14,8 +17,8 @@ const Navbar = () => {
         <a >DevTinderUI</a>
         </div>
       </div>
-      <div className="flex gap-2">
-        
+      <div className="flex  items-center  gap-2">
+         {user && <p className="px-3 font-sans"> Hello { user.firstName}</p>}
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
@@ -23,12 +26,13 @@ const Navbar = () => {
             aria-label="User menu"
             className="btn btn-ghost btn-circle avatar"
           >
-            <div className="w-10 rounded-full">
+           {user &&(<div className="w-10 rounded-full ">
+             
               <img
-                alt="User avatar"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                alt="User profile"
+                src={user?.photo}// optional chaining to handle cases where user might be null
               />
-            </div>
+            </div>)}
           </div>
           <ul
             tabIndex={0}
