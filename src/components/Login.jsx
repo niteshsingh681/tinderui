@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import axios from "axios";
 import { BASE_URL } from '../utils/constant.js';
 import {useDispatch} from 'react-redux';
@@ -7,6 +7,7 @@ import{useNavigate} from 'react-router-dom';
 const Login = () => {
   const [emailId,setEmail]=React.useState("temp123@gmail.com");
   const [password,setPassword]=React.useState("Temp@123m");
+  const [err,setErr]=React.useState("");
   const dispatch=useDispatch();
   const navigate=useNavigate();
   const handleLogin= async()=>{
@@ -19,6 +20,7 @@ const Login = () => {
       withCredentials:true
     }
   );
+
   // console.log("Login Success",user.data.user);
     //store the user in redux store
     dispatch(addUser(user.data.user));
@@ -26,7 +28,12 @@ const Login = () => {
      return navigate("/feed");
     }
     catch(err){
-      console.error("Login failed",err);
+      setErr(err.response.data);
+      setTimeout(()=>{
+           setErr(""); 
+      },2000)
+       
+      
     }
 
    
@@ -59,6 +66,7 @@ const Login = () => {
     </div>
     
     <div className="card-actions justify-center ">
+      <p className ="font-sans text-red-700"> { err}</p>
       <button className="btn btn-primary my-2" onClick={handleLogin}>Login Now</button>
     </div>
   </div>

@@ -33,5 +33,6 @@ BODY
 
 
 ## DAY==>03
--->by default(token is not present ) render to login page if user is not logged in
+-->by default(token is not present ) render(direct) to login page if user is not logged in
+-->build logout features
 -->
