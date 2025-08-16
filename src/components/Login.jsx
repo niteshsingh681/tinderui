@@ -5,8 +5,8 @@ import {useDispatch} from 'react-redux';
 import{ addUser} from '../utils/userSlice.js';
 import{useNavigate} from 'react-router-dom';
 const Login = () => {
-  const [emailId,setEmail]=React.useState("temp123@gmail.com");
-  const [password,setPassword]=React.useState("Temp@123m");
+  const [emailId,setEmail]=React.useState("aman123@gmail.com");
+  const [password,setPassword]=React.useState("Aman@123m");
   const [err,setErr]=React.useState("");
   const dispatch=useDispatch();
   const navigate=useNavigate();
