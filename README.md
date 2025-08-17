@@ -37,4 +37,11 @@ BODY
 -->build logout features
 -->get the feed  page and keep it in store {creating a new slice named as feedSlice}
 -->built a card of feed data
+-->edit profile picture and show toast
 -->
+
+
+## DAY==>04
+-->create a connestion request page {THOSE WHO ARE INTERESTED AND THOSE WHO REJECTED}
+-->BUILD A FRIEND PAGE WHERE ALL DEVELOPER ARE MUTUAL CONNECTION 
+-->BUILD ACCEPTED AND REJECTED BUTOON AND ITS FUNCTIONALITIY
