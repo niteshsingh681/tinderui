@@ -8,7 +8,8 @@ import Feed from './components/Feed.jsx';
 import Profile from './components/Profile.jsx';
 import Login from './components/Login.jsx';
 import Logout from './components/Logout.jsx';
-
+import Connection from './components/Connection.jsx';
+import Friend from './components/Friend.jsx'
 function App() {
   return (
     <Provider store={appStore}>
@@ -23,6 +24,9 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="logout" element={<Logout />} />
             <Route path="feed" element={<Feed />} />
+            <Route path="connections" element={<Connection/>} />
+            <Route path="friend" element={<Friend />} />
+
           </Route>
         </Routes>
       </BrowserRouter>
